@@ -1,0 +1,36 @@
+<!DOCTYPE html> 
+<html> 
+
+<head> 
+	<title>Csv </title> 
+</head> 
+
+<body style="text-align: center;"> 
+	<h1 style="color: Red;">Welcome</h1> 
+  <h4>Enter FirstName<input type="text" placeholder="Enter your FirstName"></h4>
+    <h4>Enter LastName<input type="text" placeholder="Enter your LastName"></h4>
+	<p>Select a file and click the button Enter.</p> 
+	<form> 
+		<input type="file" id="file1" /> 
+		<input type="button" value="Enter"
+							onclick="checkFileExtension();"/>
+    <span class="output"></span>
+    <p>The file extension is: <span class="output"></span></p> 
+	</form> 
+  </span></> 
+	<script language="javascript"> 
+		function checkFileExtension() { 
+			fileName = document.querySelector('#file1').value; 
+			extension = fileName.split('.').pop(); 
+      if(extension=="csv"){
+         document.querySelector('.output') 
+                                     .textContent = fileName; 
+      }
+      else{
+        alert("You should enter only csv file")
+        }
+		}; 
+	</script> 
+</body> 
+
+</html> 
